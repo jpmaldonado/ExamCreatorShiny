@@ -21,7 +21,7 @@ createExam <- function(df, chosenQuestionsSubject){
     subjectQuestions <- subset(df, Area==subjects[i])
     possibleQuestions <- unique(subjectQuestions$Question)
     
-    if(chosenQuestionsSubject[i]<2){
+    if(chosenQuestionsSubject[i]<1){
       next
     }
     questions <- sample(possibleQuestions, chosenQuestionsSubject[i])
